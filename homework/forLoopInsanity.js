@@ -64,16 +64,29 @@ var numbers = [1, 3, 5, 6, 7, 14, 17, 18, 19 ,25, 26, 36, 39, 45, 53, 67, 73, 84
 // 	strings.push(randomItems[i]);
 // }
 var randomItems = [1, "Hello", 5, "GoodBye", 7, 14, "Aloha", 18, 19 ,"Adios", 26, 36, "Ciao"];
-// function printNumbers(value){
+
+function printNumbers(arr, type){
 // var numbers = [];
 // var strings = [];
-// 	for(var i=0; i<randomItems.length; i++){
-// 		if(value === "number")
-//
-// 	}
-// 	console.log(numbers, strings);
-//  }
-// printNumbers(1);
+if(type === "string"){
+	for(var i=0; i<arr.length; i++){
+		if(typeof arr[i] === 'string'){
+				console.log(arr[i]);
+		}
+	}
+
+} else if(type === 'number'){
+	for(var i=0; i<arr.length; i++){
+		if(typeof arr[i] === 'number'){
+			console.log(arr[i]);
+		}
+	}
+
+}
+
+ }
+printNumbers(randomItems, 'number');
+printNumbers(randomItems, 'string');
 // challenge Five
 // loop through the array of customer objects, and print ONLY their names
 // bonus: Print only customer names that begin with the letter 'A'
@@ -105,15 +118,15 @@ var customers = [
 // loop through the array of customers, and print ONLY customers that are 'gold' and 'paid'
 // bonus: Return a completely new array that meets these conditions.
 
-function loopCustomersGoldPaid(){
-	var GoldPaid = [];
-	for(var i=0; i<customers.length; i++){
-		if(customers[i].tier === 'gold' && customers[i].paid === true){
-		GoldPaid.push(customers[i]);
-
-	}
-	}
-	console.log(GoldPaid);
-}
-
-loopCustomersGoldPaid();
+// function loopCustomersGoldPaid(){
+// 	var GoldPaid = [];
+// 	for(var i=0; i<customers.length; i++){
+// 		if(customers[i].tier === 'gold' && customers[i].paid === true){
+// 		GoldPaid.push(customers[i]);
+//
+// 	}
+// 	}
+// 	console.log(GoldPaid);
+// }
+//
+// loopCustomersGoldPaid();
