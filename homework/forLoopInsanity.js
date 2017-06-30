@@ -8,14 +8,6 @@
 // bonus: Allow your function to accept the Letter, as a parameter
 var names = ["Aaron", "Anthony", "Al", "Bob", "Carl", "Cindy", "Derek", "Don", "Frank", "Percil", "Taryn"];
 
-// function counter(){
-// 	for(var i =0; i<12; i++){
-// 		console.log(i);
-//
-// 	}
-// }
-// console.log(counter());
-
 
 // function findA(letter, myArr){
 // 	for(var i =0; i<myArr.length; i++){
@@ -32,15 +24,15 @@ var names = ["Aaron", "Anthony", "Al", "Bob", "Carl", "Cindy", "Derek", "Don", "
 // bonus: Allow your function to accept the comparison Number, as a parameter
 var numbers = [1, 3, 5, 6, 7, 14, 17, 18, 19 ,25, 26, 36, 39, 45, 53, 67, 73, 84, 99]
 
-// function greaterThanTen(num){
-// 	for(var i=0; i<numbers.length; i++){
-// 		if(numbers[i] > num){
-// 			console.log(numbers[i]);
+// function greaterThanTen(arr, num){
+// 	for(var i=0; i<arr.length; i++){
+// 		if(arr[i] > num){
+// 			console.log(arr[i]);
 // 		}
 // 	}
 // }
 //
-// greaterThanTen(84);
+// greaterThanTen(numbers, 84);
 
 // challenge Three
 // loop through the numbers array, and print numbers greater than 10, but less than 50
@@ -53,6 +45,20 @@ var numbers = [1, 3, 5, 6, 7, 14, 17, 18, 19 ,25, 26, 36, 39, 45, 53, 67, 73, 84
 // 	}
 // }
 // greaterThanSome();
+
+// function fizzBuzz(){
+// 	for(var i =0; i<=100;i=+1){
+// 		if(i%5 === 0 && i%3){
+// 		console.log("fizz buzz", i);
+// 	} else if(i%5 == 0){
+// 		console.log("fizz", i);
+// 	} else if(i%3 == 0){
+// 		console.log("buzz", i);
+// 	}
+// }
+//
+// }
+// fizzBuzz();
 
 // challenge Four
 // loop through the array of random items, and print ONLY Numbers

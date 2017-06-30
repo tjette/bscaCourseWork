@@ -178,4 +178,3 @@
   //With a little bit of elbow grease, we've now created a function that cleanly
   //and efficiently displays each member of our band and the instrument they
   //play! Good job!
-
