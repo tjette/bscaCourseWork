@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css"
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,8 +20,44 @@
   </head>
   <body>
       <div class="" id="app">
+          <h2 class="header">{{title}}</h2>
+         <div class="container">
+           <div class="">
+             <h3>Lets Add Some Birds</h3>
+             <form id="myForm" v-on:submit.prevent="addBird" class="theForm">
 
-      </div>
+               <div class="col-md-12 formField">
+                   <label for="">Bird Name</label>
+                   <input type="text" v-model="name">
+               </div>
+               <div class="col-md-12 formField">
+                 <label for="">Bird Species</label>
+                 <input type="text" v-model="species">
+               </div>
+               <div class="col-md-12 formField">
+                 <label for="">Bird Gender</label>
+                 <input type="text" v-model="gender">
+               </div>
+               <div class="col-md-12 formField">
+                 <label for="">Bird Image</label>
+                 <input type="text" v-model="img">
+               </div>
+               <button type="submit" class="btn btn-primary submitForm col-md-12" name="button">Submit Bird</button>
+             </form>
+           </div>
+
+
+            <div class="row">
+            <div class="col-md-4 col-xs-4 col-sm-4 birdCard" v-for="b in birds">
+              <h3>Name: {{b.name}}</h3>
+              <p>Species: {{b.species}}</p>
+              <p>Gender: {{b.gender}}</p>
+              <img :src="b.img">
+            </div>
+          </div>
+          </div>
+          </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
