@@ -1,5 +1,9 @@
 .flex-container{
   border: solid 10px red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
 }
 
 .flex-item{
