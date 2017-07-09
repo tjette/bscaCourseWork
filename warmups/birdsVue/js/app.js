@@ -44,7 +44,8 @@ var app = new Vue({
     name: undefined,
     species: undefined,
     gender: undefined,
-    img: undefined
+    img: undefined,
+    selectedBirds: []
   },
   methods: {
     addBird: function(){

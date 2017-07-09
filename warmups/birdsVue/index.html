@@ -29,6 +29,7 @@
                <div class="col-md-12 formField">
                    <label for="">Bird Name</label>
                    <input type="text" v-model="name">
+
                </div>
                <div class="col-md-12 formField">
                  <label for="">Bird Species</label>
@@ -56,7 +57,11 @@
               <p>Species: {{b.species}}</p>
               <p>Gender: {{b.gender}}</p>
               <img :src="b.img">
+              <input type="checkbox" v-model="selectedBirds" :value="b.name">
+
             </div>
+            <p v-if="selectedBirds.length > 0">You selected: {{selectedBirds.join(', ')}}</p>
+            <p v-else>No birds have been selected</p>
           </div>
           </div>
           </div>
