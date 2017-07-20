@@ -1,0 +1,32 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 3px solid black;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    border: 3px solid red;
+    }
+
+img.cardImage {
+    max-width: 50%;
+    height: 200px;
+}
+
+.cardBody {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 33px;
+}
+
+.baseballHeader{
+  text-align: center;
+}

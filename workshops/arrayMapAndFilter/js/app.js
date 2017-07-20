@@ -32,15 +32,44 @@ var app = new Vue({
 });
 
 // return a map of just players names
-
+var playerNames = baseballPlayers.map(function(name){
+  return name.name;
+})
+// console.log(playerNames);
 // return an array of a objects that look like {player: "Barry Bonds", team: "San Francisco Giants"}
+var playerTeam = baseballPlayers.map(function(name){
+  return {player: name.name, team:name.team}
+})
+// console.log(playerTeam);
 
 // return an array of strings that look like "Barry Bonds played for the San Francisco Giants"
-
+var playerPlayedFor = baseballPlayers.map(function(name){
+  return name.name + " played for the " + name.team;
+})
+// console.log(playerPlayedFor);
 // return an array of just HomeRuns
-
+var homeRuns = baseballPlayers.map(function(name){
+  return name.HR;
+})
+// console.log(homeRuns);
 // return an array of items that have less than 586 HomeRuns
-
+var lessThan = baseballPlayers.filter(function(hr){
+  if(hr.HR < 586){
+    return hr.HR;
+  }
+})
+// console.log(lessThan);
 // return just the names of the players that have less than 586 home runs
-
+var lessThanWithPlayers = baseballPlayers.filter(function(hr){
+  if(hr.HR < 586){
+    return {name: hr.name};
+  }
+})
+console.log(lessThanWithPlayers);
 // return an array of players that have more than 370 HR, but less than 400
+var moreAndLess = baseballPlayers.filter(function(something){
+  if(something.HR > 370 && something.HR <400){
+    return something;
+  }
+})
+// console.log(moreAndLess);

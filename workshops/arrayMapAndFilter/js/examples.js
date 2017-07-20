@@ -24,7 +24,7 @@ for (var i = 0; i < numbers.length; i++) {
 
 
 var mappedOddNumbers = numbers.map(function(item){
-  return item * 2
+  return item * 2;
 });
 
 // console.log(mappedOddNumbers);
@@ -95,23 +95,37 @@ var filteredNumbersGreaterThanFive = numbers.filter(function(num){
   return {count: num}
 });
 
-console.log(filteredNumbersGreaterThanFive)
+// console.log(filteredNumbersGreaterThanFive)
 
 // ------------------------
 // ADDITIONAL EXAMPLES
 // ------------------------
 
-var names = ["David Bowie", "John Lennon", "Jimi Hendirx", "Paul McCartney", "Kurt Cobain"];
+var names = ["David Bowie", "John Lennon", "Jimi Hendrix", "Paul McCartney", "Kurt Cobain"];
 
 // map the names to objects
 // ex {name: "David Bowie"}
+var mapNames = names.map(function(name){
+  return name;
+})
+
+// console.log(mapNames);
 
 // map just the first names
 // ex: ["David", "John", "Jimi"]
 
+var firstName = names.map(function(first){
+  return first.split(' ').slice(0,1).join(" ");
+})
+// console.log(firstName);
 // filter to return names that begin with J
 // ex: ["John Lennon", "Jimi Hendrix"]
-
+var beginsWithJ = names.filter(function(name){
+  if(name[0] === "J" ){
+    return name;
+  }
+})
+// console.log(beginsWithJ);
 // use map and filter together to return names that begin with J.
 // ex: ["John", "Jimi"]
 
@@ -124,9 +138,17 @@ var shapes = [
 ];
 
 // return an array of just shape names
-
+var getShapeName = shapes.map(function(shape){
+  return shape.name;
+})
+// console.log(getShapeName);
 // return an array of Green shapes
-
+var getGreen = shapes.map(function(shape){
+  if(shape.color === "Green"){
+    return shape;
+  }
+})
+console.log(getGreen);
 // return an array of shapes with less then 4 sides
 
 

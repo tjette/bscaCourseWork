@@ -16,7 +16,7 @@
 
   <div id="app">
 
-    <div class="jumbotron">
+    <div class="jumbotron baseballHeader">
       <h2>{{ title }}</h2>
       <p>class of 82'</p>
     </div>
@@ -26,10 +26,10 @@
     <div class="card-container">
       <!-- INDIVIDUAL PLAYER FLEX ITEM -->
       <div v-for="p in players" class="card">
-        <img :src="p.img" alt="" class="card-img">
-        <div class="card-body">
-          <h3 class="card-header">{{ p.name }}</h3>
-          <p> <i class="fa fa-trophy"></i> HRs: {{ p.HR }} </p>
+        <img class="cardImage":src="p.img" alt=""/>
+        <div class="cardBody">
+          <h3 class="cardHeader cardItem">{{ p.name }}</h3>
+          <p> <i class="fa fa-trophy cardItem"></i> HRs: {{ p.HR }} </p>
           <p>{{ p.team }}</p>
         </div>
       </div>
