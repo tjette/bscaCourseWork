@@ -1,0 +1,39 @@
+.mainApp{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.header{
+  margin-top: 4em;
+}
+
+.appHeader {
+  float: left;
+  text-align: center;
+  width: 100%;
+  font-size: 3em;
+}
+
+.navBar {
+  list-style: none;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: block;
+  float: left;
+}
+
+.navBar li{
+  display: inline;
+  margin-left: 6.25%;
+  margin-right: 6.25%;
+  text-align: center;
+  font-size: 2em;
+  cursor: pointer
+}
+
+.navBar li:hover{
+  text-decoration: underline;
+
+}
