@@ -28,6 +28,17 @@ var app = new Vue({
   data: {
     title: "Baseball Enthusiasts Club",
     players: baseballPlayers
+  },
+  methods: {
+    playerNames: baseballPlayers.map(function(name){
+      return name.name;
+      console.log("playerNames function was pressed", playerNames);
+    }),
+
+    playerTeam: baseballPlayers.map(function(name){
+      return {player: name.name, team:name.team}
+    })
+
   }
 });
 
@@ -65,7 +76,7 @@ var lessThanWithPlayers = baseballPlayers.filter(function(hr){
     return {name: hr.name};
   }
 })
-console.log(lessThanWithPlayers);
+// console.log(lessThanWithPlayers);
 // return an array of players that have more than 370 HR, but less than 400
 var moreAndLess = baseballPlayers.filter(function(something){
   if(something.HR > 370 && something.HR <400){
