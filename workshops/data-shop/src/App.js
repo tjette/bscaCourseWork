@@ -139,10 +139,11 @@ const getProductById = (productId) => {
   let productName
   DATA.products.forEach((product) =>{
     if (product.id === productId) {
-      productName = product
+      productName = product.name
       console.log(productName)
     }
   })
+  return productName
 }
 
 const getOrderById = (orderId) => {
@@ -152,6 +153,7 @@ const getOrderById = (orderId) => {
       orderName = order.name
     }
   })
+  return orderName
 }
 
 
@@ -165,10 +167,11 @@ const getProductsForOrder = (id) => {
       console.log(currentOrder);
       currentOrder.products.forEach((currentProductId) => {
         console.log(currentProductId);
+        console.log(currentOrder.products, "currentOrder");
+        console.log(id)
         productsOfOrderArray.push({
           id: currentProductId,
           product: getProductById(currentProductId)
-
         })
       })
     }
@@ -188,7 +191,7 @@ console.log(getProductById(1));
 // console.log(getOrderInfo());
 // console.log(getNonActiveUsers());
 // console.log(getProductsOver40());
-console.log(getProductsForOrder(1))
+console.log(getProductsForOrder(3))
 
     return (
       <div className="App">
