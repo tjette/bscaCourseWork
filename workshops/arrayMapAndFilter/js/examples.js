@@ -8,6 +8,28 @@
 // ------------------------
 // MAP EXAMPLES
 // ------------------------
+
+
+const movieData = {
+    all: {
+        list: [
+            { title: 'Blade Runner 2049', score: 91 },
+            { title: 'The Mountain Between Us', score: 54},
+            { title: 'Victoria & Abdul', score: 67 },
+            { title: 'My Little Pony', score: 71 },
+            { title: 'The Florida Project', score: 96 }
+        ]
+    }
+}
+const movieLoop = (arr) => {
+    for(let i=0; i<arr.length;i++) {
+      console.log(arr[i])
+    }
+
+    }
+console.log(movieLoop(movieData.all.list));
+
+
 var numbers = [1,2,3,4,5,6,7,8,9];
 
 
@@ -148,7 +170,7 @@ var getGreen = shapes.map(function(shape){
     return shape;
   }
 })
-console.log(getGreen);
+// console.log(getGreen);
 // return an array of shapes with less then 4 sides
 
 
