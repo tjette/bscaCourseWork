@@ -13,10 +13,12 @@ class Queue {
     return 'Err: Exceeded allocated queue limit.'
   }
   pop(){
-    let val = this.data.splice(0,1)
-    console.log(val)
-    this.size -=1
-    return val[0]
+    if (this.size) {
+      let item = this.data.splice(0,1)
+      this.size -=1
+      return item[0]
+    }
+    return "ERROR"
   }
 }
 const queue = new Queue(5)
@@ -24,8 +26,6 @@ for(let i=0; i<6; i+=1) {
   queue.push(i)
 }
 
-console.log(queue)
-
-console.log(queue.pop())
-
-console.log(queue)
+for(let i=0; i<6; i++) {
+  console.log(queue.pop())
+}
